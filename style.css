@@ -11,30 +11,71 @@ ul{
     width: 80%;
     height: 350px;
     margin: 1rem auto;
-    background-color: green;
+    background-color: rgb(245, 245, 245);
     /* overflow: hidden; */
 }
 .carousel-container .items-list {
    
-    background-color: indianred;
-    position: absolute;
+    /* background-color: indianred; */
+    position: relative;
+    height: 80%;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-   
+    /* display: flex; */
+    transition: all .2s ease-in-out;
+   /* align-items: center; */
+   /* justify-content: center; */
 }
 .carousel-container .list-item{
     display: inline-block;
-    position: relative;
+   position: absolute;
+     /* position: relative; */
+    top: 0;
+    /* left: 50%; */
     width: 300px;
     height: 100%;
     margin: 0 1rem;
-    background-color: greenyellow;
+   
+    /* background-color: greenyellow; */
 }
 .carousel-container .list-item img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
-.list-item:first-child{
-    order: 1;
+.list-item.fadeing-item{
+     /* opacity: 5%; */
+     animation: fade .3s  linear ;
+    /* order: 1; */
+}
+@-webkit-keyframes fade {
+
+
+	0% {
+		opacity: 50%;
+	}
+
+	50% {
+		opacity: 80%;
+	}
+
+	100% {
+		opacity: 100%;
+	}
+}
+
+@keyframes fade {
+
+
+	0% {
+		opacity: 50%;
+	}
+
+	50% {
+		opacity: 80%;
+	}
+
+	100% {
+		opacity:100%;
+	}
 }
